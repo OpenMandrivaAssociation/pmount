@@ -1,23 +1,20 @@
 %define name pmount
-%define version 0.9.9
-%define release %mkrel 2
+%define version 0.9.13
+%define release %mkrel 1
 
-Summary: Pmount allow mounting devices without fstab modifications
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: http://www.piware.de/projects/%{name}-%{version}.tar.bz2
-Patch0:  pmount-0.9.6-fix-sysfs-detection.patch
-# (fc) 0.9.9-2mdv don't use dbus deprecated api
-Patch1:  pmount-0.9.9-deprecated.patch
-
-License: GPL
-Group: System/Base
-Url: http://www.piware.de/projects.shtml
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Name:       %{name}
+Version:    %{version}
+Release:    %{release}
+Summary:    Pmount allow mounting devices without fstab modifications
+License:    GPL
+Group:      System/Base
+Url:        http://www.piware.de/projects.shtml
+Source0:    http://www.piware.de/projects/%{name}-%{version}.tar.gz
+Patch0:     %{name}-0.9.13-no-user-change-during-install.patch
 Buildrequires: libsysfs-devel 
 Buildrequires: hal-devel
 Buildrequires: perl-XML-Parser
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 Pmount allow mounting usb, firewire and pcmci media without modifying
@@ -25,12 +22,11 @@ Pmount allow mounting usb, firewire and pcmci media without modifying
 
 %prep
 %setup -q -n %{name}-%{version}
-#%patch0 -p0
-%patch1 -p1 -b .deprecated
-autoconf
+%patch0 -p1 -b .no-user-change
+autoreconf
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
