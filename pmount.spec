@@ -11,6 +11,7 @@ Group:      System/Base
 Url:        http://www.piware.de/projects.shtml
 Source0:    http://www.piware.de/projects/%{name}-%{version}.tar.gz
 Patch0:     %{name}-0.9.13-no-user-change-during-install.patch
+Buildrequires: gettext-devel 
 Buildrequires: libsysfs-devel 
 Buildrequires: hal-devel
 Buildrequires: perl-XML-Parser
