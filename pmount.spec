@@ -15,7 +15,6 @@ Buildrequires: gettext-devel
 Buildrequires: libsysfs-devel 
 Buildrequires: hal-devel
 Buildrequires: perl-XML-Parser
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 Pmount allow mounting usb, firewire and pcmci media without modifying
