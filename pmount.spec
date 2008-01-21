@@ -11,7 +11,7 @@ Group:      System/Base
 Url:        http://packages.debian.org/unstable/utils/pmount
 Source0:    http://ftp.de.debian.org/debian/pool/main/p/%{name}/%{name}_%{version}.orig.tar.gz
 Patch0:     %{name}-0.9.17-no-user-change-during-install.patch
-Buildrequires: gettext-devel 
+Buildrequires: glib-gettextize gettext-devel
 Buildrequires: libsysfs-devel 
 Buildrequires: hal-devel
 Buildrequires: perl-XML-Parser
