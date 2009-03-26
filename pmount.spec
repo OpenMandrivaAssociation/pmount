@@ -1,12 +1,12 @@
 %define name pmount
-%define version 0.9.17
-%define release %mkrel 4
+%define version 0.9.19
+%define release %mkrel 1
 
 Name:       %{name}
 Version:    %{version}
 Release:    %{release}
 Summary:    Pmount allow mounting devices without fstab modifications
-License:    GPL
+License:    GPLv2
 Group:      System/Base
 Url:        http://packages.debian.org/unstable/utils/pmount
 Source0:    http://ftp.de.debian.org/debian/pool/main/p/%{name}/%{name}_%{version}.orig.tar.gz
@@ -16,6 +16,7 @@ Buildrequires: ext2fs-devel
 Buildrequires: libsysfs-devel 
 Buildrequires: hal-devel
 Buildrequires: perl-XML-Parser
+BuildRequires: libtool
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
@@ -26,6 +27,7 @@ Pmount allow mounting usb, firewire and pcmci media without modifying
 %setup -q -n %{name}-%{version}
 %patch0 -p1 -b .no-user-change-during-install
 autoreconf
+libtoolize
 
 %build
 %configure2_5x
