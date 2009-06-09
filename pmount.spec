@@ -1,6 +1,6 @@
 %define name pmount
 %define version 0.9.19
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:       %{name}
 Version:    %{version}
@@ -12,7 +12,7 @@ Url:        http://packages.debian.org/unstable/utils/pmount
 Source0:    http://ftp.de.debian.org/debian/pool/main/p/%{name}/%{name}_%{version}.orig.tar.gz
 Patch0:     %{name}-0.9.17-no-user-change-during-install.patch
 Buildrequires: glib-gettextize gettext-devel intltool
-Buildrequires: ext2fs-devel
+Buildrequires: libblkid-devel
 Buildrequires: libsysfs-devel 
 Buildrequires: hal-devel
 Buildrequires: perl-XML-Parser
