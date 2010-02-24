@@ -1,6 +1,6 @@
 %define name pmount
 %define version 0.9.20
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:       %{name}
 Version:    %{version}
@@ -11,6 +11,7 @@ Group:      System/Base
 Url:        http://packages.debian.org/unstable/utils/pmount
 Source0:    http://ftp.de.debian.org/debian/pool/main/p/%{name}/%{name}_%{version}.orig.tar.gz
 Patch0:     %{name}-0.9.17-no-user-change-during-install.patch
+Patch1:     pmount-0.9.20-ext4fs.patch
 Buildrequires: glib-gettextize gettext-devel intltool
 Buildrequires: libblkid-devel
 Buildrequires: libsysfs-devel 
@@ -26,6 +27,7 @@ Pmount allow mounting usb, firewire and pcmci media without modifying
 %prep
 %setup -q -n %{name}-%{version}
 %patch0 -p1 -b .no-user-change-during-install
+%patch1 -p1 -b .etx4fs
 autoreconf
 libtoolize
 
