@@ -1,6 +1,6 @@
 %define name pmount
 %define version 0.9.20
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name:       %{name}
 Version:    %{version}
