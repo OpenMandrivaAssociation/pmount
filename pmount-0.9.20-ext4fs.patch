@@ -1,0 +1,29 @@
+##! /bin/sh /usr/share/dpatch/dpatch-run
+## 10-ext4fs.dpatch by  <fourmond@debian.org>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad pmount~/man/pmount.1 pmount/man/pmount.1
+--- pmount~/man/pmount.1	2009-09-12 21:56:47.000000000 +0200
++++ pmount/man/pmount.1	2009-09-17 20:37:48.000000000 +0200
+@@ -276,6 +276,7 @@
+ .IR hfs ,
+ .IR ext3 , 
+ .IR ext2 , 
++.IR ext4 , 
+ .IR reiserfs , 
+ .IR reiser4 , 
+ .IR xfs , 
+diff -urNad pmount~/src/fs.c pmount/src/fs.c
+--- pmount~/src/fs.c	2009-09-12 21:56:47.000000000 +0200
++++ pmount/src/fs.c	2009-09-17 20:37:48.000000000 +0200
+@@ -28,6 +28,7 @@
+       ",file_umask=%04o,dir_umask=%04o"},
+     { "ext3", "nodev,noauto,nosuid,user,errors=remount-ro", 0, NULL, 0 },
+     { "ext2", "nodev,noauto,nosuid,user,errors=remount-ro", 0, NULL, 0 },
++    { "ext4", "nodev,noauto,nosuid,user,errors=remount-ro", 0, NULL, 0 },
+     { "reiserfs", "nodev,noauto,nosuid,user", 0, NULL, 0 },
+     { "reiser4", "nodev,noauto,nosuid,user", 0, NULL, 0 },
+     { "xfs", "nodev,noauto,nosuid,user", 0, NULL, 0 },
