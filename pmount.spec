@@ -5,7 +5,7 @@
 Name:       %{name}
 Version:    %{version}
 Release:    %{release}
-Summary:    Pmount allow mounting devices without fstab modifications
+Summary:    Allow mounting devices without fstab modifications
 License:    GPLv2
 Group:      System/Base
 Url:        http://packages.debian.org/unstable/utils/pmount
