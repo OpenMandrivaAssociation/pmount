@@ -1,7 +1,7 @@
 Summary:	Pmount allow mounting devices without fstab modifications
 Name:		pmount
 Version:	0.9.23
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		System/Base
 Url:		http://packages.debian.org/unstable/utils/pmount
