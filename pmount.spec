@@ -4,7 +4,7 @@ Version:	0.9.23
 Release:	5
 License:	GPLv2+
 Group:		System/Base
-Url:		http://packages.debian.org/unstable/utils/pmount
+Url:		https://packages.debian.org/unstable/utils/pmount
 Source0:	http://ftp.de.debian.org/debian/pool/main/p/%{name}/%{name}_%{version}.orig.tar.bz2
 Patch0:		pmount-0.9.17-no-user-change-during-install.patch
 Buildrequires:	glib-gettextize
