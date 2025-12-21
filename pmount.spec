@@ -7,6 +7,11 @@ Group:		System/Base
 Url:		https://packages.debian.org/unstable/utils/pmount
 Source0:	http://ftp.de.debian.org/debian/pool/main/p/%{name}/%{name}_%{version}.orig.tar.bz2
 Patch0:		pmount-0.9.17-no-user-change-during-install.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 Buildrequires:	glib-gettextize
 Buildrequires:	intltool
 BuildRequires:	libtool
